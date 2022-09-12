@@ -1,0 +1,18 @@
+server:
+  port: 8090
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: fraud
+
+  data:
+    mongodb:
+      uri: mongodb://root:example@localhost:27017/?authMechanism=SCRAM-SHA-1
+      database: fraud
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
